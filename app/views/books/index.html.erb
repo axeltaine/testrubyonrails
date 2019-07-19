@@ -1,11 +1,13 @@
 <h1>Liste des livres</h1>
 <h2>test ruby on rail</h2>
-<% @books.each do |book| %>
-  <p><a href="/books/<%= book.id %>"><%= book.title %></a></p>
-<% end %>
-<%= form_tag "/books", method: "post" do %>
-  <input type="text" name="title" />
-  <input type="submit" value="Ajouter le livre" />
-<% end %>
+<div class="container text-center">
+  <% @books.each do |book| %>
+    <p><a href="/books/<%= book.id %>"><%= book.title %></a></p>
+  <% end %>
+  <%= form_tag "/books", method: "post" do %>
+    <input type="text" name="title" />
+    <input type="submit" value="Ajouter le livre" />
+  <% end %>
+</div>
 <p><a href="/">Lien vers page 1</a></p>
 

@@ -1,5 +1,5 @@
 <h1><%= @book.title %></h1>
-
+<div classe="container">
 <%= form_tag "/books/#{@book.id}", method: "patch" do %>
   <input type="text" name="title" value="<%= @book.title %>" />
   <input type="submit" value="Modifier le livre" />
@@ -7,4 +7,5 @@
 <%= form_tag "/books/#{@book.id}", method: "delete" do %>
   <input type="submit" value="Supprimer le livre" />
 <% end %>
+</div>
 <p><a href="/books">Retourner à l’index</a></p>
