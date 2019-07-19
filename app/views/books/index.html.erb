@@ -1,0 +1,10 @@
+<h1>Books</h1>
+<h2>test ruby on rail</h2>
+<% @les_livres.each do |un_livre| %>
+  <p><%= un_livre.title %></p>
+<% end %>
+<%= form_tag "/books", method: "post" do %>
+  <input type="text" name="title" />
+  <input type="submit" value="Ajouter le livre" />
+<% end %>
+<p><a href="/">Lien vers page 1</a></p>

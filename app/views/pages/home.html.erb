@@ -1,0 +1,20 @@
+<h1>MaitriseWeb</h1>
+
+<p>APP interne ToDoList : <%= @variable %>.</p>
+
+<h1>Bienvenue !</h1>
+<p>Ceci est la correction de l'exercice d'OpenClassrooms.</p>
+<p>Cette vue est ici : app/views/pages/home.html.erb</p>
+<p><a href="/contact">Lien vers la 2e page</a></p>
+<p><a href="/books">Lien vers books</a></p>
+
+<% if @variable == 42 %>
+    Super, la variable vaut 42 !
+<% else %>
+    Mince, la varibale ne vaut pas 42 !
+<% end %>
+
+<% @variable.times do |i| %>
+    <%= i %>
+<% end %>
+
