@@ -1,7 +1,21 @@
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="/"><%= image_tag("/assets/rubylang.png",  alt: "like", class: "like_image_for_index") %></a>
+  <form class="form-inline">
+    <a class="btn btn-outline-primary" href="/" role="button">
+    Home
+    </a>
+    <div style="padding-left: 10px;">
+      <a class="btn btn-outline-success" href="/contact" role="button">
+      Contact
+      </a>
+    </div>
+  </form>
+</nav>
 <h1><%= @book.title %></h1>
 <div class="container">
     <%= form_tag "/books/#{@book.id}", method: "patch" do %>
     <input type="text" name="title" value="<%= @book.title %>" />
+    <%= @book.errors[:title].first %>
     <input class="btn btn-primary" type="submit" value="Modifier le livre" />
     <% end %>
     <%= form_tag "/books/#{@book.id}", method: "delete" do %>
