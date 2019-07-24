@@ -16,7 +16,6 @@
 <h2><%= Book.count %> Livres au total</h2>
 <br>
 <div class="container text-center">
-<%= paginate @books %>
 <% @books.each do |book| %>
 <%= exemple book %>
 <% end %>
@@ -35,6 +34,9 @@
       </a>
     </p>
   <% end %>
+  <div class="pagination justify-content-center">
+  <%= paginate @books, theme: 'twitter-bootstrap-4' %>
+  </div>
   <%= form_tag "/books", method: "post" do %>
     <input type="text" name="title" />
     <select name="category_id">
