@@ -12,7 +12,17 @@
   </form>
 </nav>
 <h1>Liste des livres</h1>
-<h2>test ruby on rail</h2>
+<br>
+<h2><%= Book.count %> Livres</h2>
+<br>
+<div class="container text-center">
+<%= paginate @books %>
+<% @books.each do |book| %>
+<%= exemple book %>
+<% end %>
+</div>
+<br>
+<br>
 <div class="container text-center">
   <% @books.each do |book| %>
     <p>
