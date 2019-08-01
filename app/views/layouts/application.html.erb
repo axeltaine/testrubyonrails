@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Castor1</title>
+    <title>BETABOOKS</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,15 @@
   </head>
 
   <body>
+  <nav class="navbar navbar-light bg-dark">
+  <a class="navbar-brand" href="/"><%= image_tag("/assets/rubylang.png",  alt: "like", class: "like_image_for_index") %></a>
+  <form class="form-inline">
+    <a class="btn btn-outline-primary" href="/" role="button">
+    Home
+    </a>
+  </form>
+</nav>
+
   <div><%= flash[:success] %></div>
     <%= yield %>
   </body>

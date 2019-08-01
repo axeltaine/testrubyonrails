@@ -1,11 +1,4 @@
-<nav class="navbar navbar-light bg-dark">
-  <a class="navbar-brand" href="/"><%= image_tag("/assets/rubylang.png",  alt: "like", class: "like_image_for_index") %></a>
-  <form class="form-inline">
-    <a class="btn btn-outline-primary" href="/" role="button">
-    Home
-    </a>
-  </form>
-</nav>
+
 <h1><%= @book.title %></h1>
 <div class="container text-center">
     <%= render "books/form" %>

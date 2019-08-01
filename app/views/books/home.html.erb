@@ -1,0 +1,30 @@
+<% if session[:user_id] %>
+  <h1>Bienvenue !</h1>
+  <%= form_tag "/books/home", method: :delete do %>
+    <input type="submit" value="Déconnexion" />
+  <% end %>
+<% else %>
+<h1>Bienvenue!</h1>
+
+<div class="container">
+ 
+        <center>
+    <%= image_tag("/assets/rubylang.png",  alt: "like", class: "like_image_for_index") %>
+        </center>
+        <h1 class="text-center">BETA<strong>BOOKS</strong><h1>
+        <h1 class="h3 mb-3 text-center font-weight-normal">Connectez vous !</h1>
+        <%= form_tag "/books/home", method: :post do %>
+        <label for="nom" class="sr-only">Nom</label>
+        <input type="text" name="name" class="form-control" placeholder="Votre nom" required
+            autofocus>
+        <label for="mdp" class="sr-only">Password</label>
+        <input type="password" name="password" class="form-control" placeholder="Votre mot de passe"
+            required>
+        <div class="checkbox mb-3">
+        </div>
+        <input type="submit" value="Se connecter" />
+        
+    
+</div>
+<% end %>
+<% end %>
