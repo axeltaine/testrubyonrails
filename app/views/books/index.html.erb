@@ -4,11 +4,6 @@
     <a class="btn btn-outline-primary" href="/" role="button">
     Home
     </a>
-    <div style="padding-left: 10px;">
-      <a class="btn btn-outline-success" href="/contact" role="button">
-      Contact
-      </a>
-    </div>
   </form>
 </nav>
 <h1>Liste des livres</h1>
@@ -16,36 +11,15 @@
 <h2><%= Book.count %> Livres au total</h2>
 <br>
 <div class="container text-center">
-<% @books.each do |book| %>
-<%= exemple book %>
-<% end %>
-</div>
-<br>
-<br>
-<div class="container text-center">
   <% @books.each do |book| %>
     <p>
       <a href="/books/<%= book.id %>">
-        <% if book.category %>
-          <%= book.title %> (<%= book.category.name %>)
-        <% else %>
+        
           <%= book.title %>
-        <% end %>
+        
       </a>
     </p>
   <% end %>
-  <div class="pagination justify-content-center">
-  <%= paginate @books, theme: 'twitter-bootstrap-4' %>
-  </div>
-  <%= form_tag "/books", method: "post" do %>
-    <input type="text" name="title" />
-    <select name="category_id">
-    <% @categories.each do |category| %>
-      <option value="<%= category.id %>"><%= category.name %></option>
-    <% end %>
-  </select>
-    <input class="btn btn-primary" type="submit" value="Ajouter le livre" />
-  <% end %>
-</div>
-<p><a href="/">Lien vers page 1</a></p>
+  <%= render "books/form" %>
+ 
 

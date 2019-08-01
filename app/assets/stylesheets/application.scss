@@ -23,3 +23,25 @@
 img.like_image_for_index {
     width: 10%;
 }
+body {
+    color: white;
+    font: 87.5%/1.5em 'Open Sans', sans-serif;
+    background: #d60202;
+    /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #d60202 1%, #5a1c1c 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%, #d60202), color-stop(100%, #5a1c1c));
+    /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #d60202 1%, #5a1c1c 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, #d60202 1%, #5a1c1c 100%);
+    /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, #d60202 1%, #5a1c1c 100%);
+    /* IE10+ */
+    background: radial-gradient(ellipse at center, #d60202 1%, #5a1c1c 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d60202', endColorstr='#5a1c1c', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    height: calc(100vh);
+    width: 100%;
+}

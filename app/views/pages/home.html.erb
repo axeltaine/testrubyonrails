@@ -1,25 +1,11 @@
-<h1>MaitriseWeb</h1>
-<p>APP interne ToDoList : <%= @variable %>.</p>
 <h1>Bienvenue !</h1>
-<p><a href="/contact">Lien vers la 2e page</a></p>
-<p><a href="/books">Lien vers books</a></p>
-
-<% if @variable == 42 %>
-    Super, la variable vaut 42 !
-<% else %>
-    Mince, la varibale ne vaut pas 42 !
-<% end %>
-
-<% @variable.times do |i| %>
-    <%= i %>
-<% end %>
 <div class="container">
  <form  method="post" class="form-signin">
         <center>
     <%= image_tag("/assets/rubylang.png",  alt: "like", class: "like_image_for_index") %>
         </center>
-        <h1 class="text-center text-light">MAITRISE<strong>WEB</strong><h1>
-        <h1 class="h3 mb-3 text-light text-center font-weight-normal">Connectez vous !</h1>
+        <h1 class="text-center">BETA<strong>BOOKS</strong><h1>
+        <h1 class="h3 mb-3 text-center font-weight-normal">Connectez vous !</h1>
         <label for="nom" class="sr-only">Nom</label>
         <input type="text" name="Name_admin" id="inputUserName" class="form-control" placeholder="Votre nom" required
             autofocus>
@@ -29,6 +15,5 @@
         <div class="checkbox mb-3">
         </div>
         <button class="btn btn-lg btn-primary btn-block" name="submit" type="submit">Se connecter</button>
-        
     </form>
 </div>
