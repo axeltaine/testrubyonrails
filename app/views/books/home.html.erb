@@ -1,7 +1,7 @@
 <% if session[:user_id] %>
   <h1>Bienvenue !</h1>
   <%= form_tag "/books/home", method: :delete do %>
-    <input type="submit" value="Déconnexion" />
+    <input type="submit" value="Déconnexion" class="btn btn-warning"/>
   <% end %>
 <% else %>
 <h1>Bienvenue!</h1>
@@ -22,7 +22,7 @@
             required>
         <div class="checkbox mb-3">
         </div>
-        <input type="submit" value="Se connecter" />
+        <input type="submit" value="Se connecter" class="btn btn-warning" />
         
     
 </div>

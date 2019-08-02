@@ -1,25 +1,32 @@
 
-<h1>Books finder</h1>
+<h1>Rechercher un livre</h1>
 <input id="search" placeholder="Title or Author">
-<button id="button" type="button">Click</button>
+<button id="button" type="button" class="btn btn-warning">Click</button>
 <div class="container text-center" id="results"></div>
 
-<h1>Liste des livres</h1>
+<h1>Liste des livres lu</h1>
 <br>
 <h2><%= Book.count %> Livres au total</h2>
 <br>
 <div class="container text-center">
- <div class="row">
+ <div class="row" style="justify-content: space-around;">
   <% @books.each do |book| %>
-    <p>
-      <a href="/books/<%= book.id %>">
-        
+
+    <div class="card" style="width: 18rem;">
+  <img src="<%= book.image %>" class="card-img-top" alt="..." style="max-height: 10rem;">
+  <div class="card-body">
+    <h5 class="card-title text-dark"><%= book.title %><br></h5>
+    <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+ <a href="/books/<%= book.id %>">
           <%= book.title %><br>
-        <%= image_tag("/assets/rubylang.png",  alt: "like", class: "like_image_for_index") %>
       </a>
-    </p>
+  </div>
+</div>
   <% end %>
-  
+  </div>
  </div>
+ <br>
+ <br>
+ <div class="container text-center">
  <%= render "books/form" %>
 </div>

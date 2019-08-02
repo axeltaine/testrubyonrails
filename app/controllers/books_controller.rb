@@ -4,7 +4,7 @@ class BooksController < ApplicationController
     @book = Book.new # afin d'exploiter le helper form_for
   end
   def create
-    @book = Book.new title: params[:title]
+    @book = Book.new title: params[:title], image: params[:image]
     if @book.save
       flash[:success] = "Le livre a bien été créé."
       redirect_to "/books"

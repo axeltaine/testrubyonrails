@@ -1,9 +1,16 @@
 
 <h1><%= @book.title %></h1>
+<center>
+<img src="<%= @book.image %>" class="img" alt="..." style="widht: 14rem;">
+</center>
+<br>
 <div class="container text-center">
-    <%= render "books/form" %>
+<%= render "books/form" %>
+<div class="row">
+    
     <%= form_tag "/books/#{@book.id}", method: "delete" do %>
-    <input class="btn btn-primary" type="submit" value="Supprimer le livre" />
+    <input class="btn btn-warning" type="submit" value="Supprimer le livre" />
     <% end %>
+    </div>
 </div>
 <p><a href="/books">Retourner à l’index</a></p>
