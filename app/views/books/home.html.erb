@@ -1,8 +1,9 @@
 <% if session[:user_id] %>
-  <h1>Bienvenue !</h1>
+ <div class="container text-center">
   <%= form_tag "/books/home", method: :delete do %>
     <input type="submit" value="Déconnexion" class="btn btn-warning"/>
   <% end %>
+  </div>
 <% else %>
 <h1>Bienvenue!</h1>
 
