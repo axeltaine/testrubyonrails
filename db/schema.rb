@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_01_092018) do
+ActiveRecord::Schema.define(version: 2019_08_02_083619) do
 
   create_table "books", force: :cascade do |t|
     t.string "title"
     t.integer "category_id"
+    t.string "image"
     t.index ["category_id"], name: "index_books_on_category_id"
   end
 
