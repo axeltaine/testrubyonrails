@@ -19,5 +19,6 @@ function bookSearch(){
 document.getElementById('button').addEventListener('click', bookSearch, false)
 
 function bookAjout(){
-    console.log('ok')
+    var ajout = results 
+    console.log(ajout)
 }
